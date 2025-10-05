@@ -19,6 +19,7 @@
     }
     main {
       padding: 20px;
+      text-align: center;
     }
     footer {
       background-color: #333;
@@ -40,6 +41,12 @@
     button:hover {
       background-color: #0056b3;
     }
+    .thankyou {
+      margin-top: 30px;
+      font-size: 18px;
+      color: green;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -51,6 +58,10 @@
   <main>
     <p>This is a simple HTML page example with header, content, and footer.</p>
     <button onclick="showMessage()">Click Me</button>
+
+    <div class="thankyou" id="thankyouMessage" style="display:none;">
+      Thank You for Visiting!
+    </div>
   </main>
 
   <footer>
@@ -60,6 +71,7 @@
   <script>
     function showMessage() {
       alert("Hello! Thanks for clicking 😊");
+      document.getElementById('thankyouMessage').style.display = 'block';
     }
   </script>
 
